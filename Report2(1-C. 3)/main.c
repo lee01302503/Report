@@ -11,4 +11,6 @@ int main(void)
   tot = a + b + c;
   printf("Korea : %d, English : %d, Math : %d\n", a, b, c);
   printf("Toatol : %d\n", tot);
+  
+  return 0;
 }

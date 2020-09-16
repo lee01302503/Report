@@ -5,7 +5,7 @@
 */
 int main(void)
 {
-  printf("Dividing %d by %d gives you %.6lf\n", 1, 2, 0.5);
+  printf("Dividing %d by %d gives you %lf\n", 1, 2, 0.5);
   return 0;
 
 }

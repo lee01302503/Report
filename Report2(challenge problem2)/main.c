@@ -6,6 +6,7 @@
 int main(void)
 {
   double kg = 0, m = 0, BMI = 0;
+  char a = "Standard!!\n", b ="You need management weight...\n" , res;
 
   printf("kg cm : ");
   scanf("%lf%lf", &kg, &m);
@@ -13,7 +14,10 @@ int main(void)
   m /= 100.0; // Convert cm to m
   BMI = kg / (m * m);
 
-  ((20.0 <= BMI) && (BMI < 25.0)) ? printf("Standard!!\n") : printf("You need management weight!!\n");
-  
+  //a = "Standard!!\n";
+  //b = "You need management weight...\n";
+  res = ((20.0 <= BMI) && (BMI < 25.0)) ? a : b;//printf("Standard!!\n") : printf("You need management weight!!\n");
+  printf("%s", "res");
+
   return 0;
 }

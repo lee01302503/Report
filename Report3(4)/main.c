@@ -20,4 +20,5 @@ int main(void)
   default:
 	printf("%d is not a factor of %d\n", a, b);
   }
+  return 0;
 }

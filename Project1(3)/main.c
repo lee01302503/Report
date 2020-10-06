@@ -9,7 +9,7 @@ int main(void)
   printf("Please enter the year : ");//enter year
   scanf("%d", &a);
 
-  if (((a % 4) == 0) || ((a % 400) == 0))//Dividing the year by 4, 100 and 400 is a leap year.
+  if ((((a % 4) == 0)&&((a%100)!=0)) || ((a % 400) == 0))//Dividing the year by 4, 100 and 400 is a leap year.
   {
 	printf("%d : leap year", a);//Output as leap year of the year
   }

@@ -43,7 +43,7 @@ int main(void)
 int nRandom(void)//Specify random number function
 {
   int a;
-  srand((unsigned)(time(NULL)));
+  srand((unsigned)(time(NULL)));//Random number initialization
   a = rand() % 2;//Takes 0 and 1 using the coefficient operator.
   return a;
 }

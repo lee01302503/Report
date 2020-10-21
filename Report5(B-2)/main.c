@@ -22,6 +22,6 @@ void sum(num)
   {
 	res += i;
   }
-  printf("1부터 %d까지의 합은 %d입니다.\n", num, res);
+  printf("The sum of 1 to %d is %d.\n", num, res);
   return;
 }

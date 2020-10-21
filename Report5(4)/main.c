@@ -17,6 +17,8 @@ int main(void)
   scanf("%lf%lf", &y1, &y2);
 
   printf("Euclidean distance : %.4lf\n", Euclideandistance( x1, x2, y1, y2));
+
+  return 0;
 }
 
 double Euclideandistance(double x1, double x2, double y1, double y2)

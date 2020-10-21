@@ -24,6 +24,6 @@ int main(void)
 double Euclideandistance(double x1, double x2, double y1, double y2)
 {
   double  Euclideandistance;
-  Euclideandistance = sqrt(pow((x1 - x2), 2) + pow((y1 - y2), 2));//Using the sqrt function and the pow function
+  Euclideandistance = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));//Using the sqrt function and the pow function
   return Euclideandistance;
 }

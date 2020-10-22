@@ -7,7 +7,6 @@
 
 /* made by Prof. Lee
 */
-int get_rand_int(void);//Random number function declaration
 void swap(int* pa, int* pb);//Declare the swap function
 void line_up(int a[]);//line up function declaration
 
@@ -19,7 +18,7 @@ int main(void)
   printf("\nRandom number :\t");
   for (i = 0; i < 10; i++)
   {
-    a[i] = get_rand_int();//Generate random function
+    a[i] = rand()%10;//Generate random function
     printf("%3d", a[i]);
   }
   line_up(a);
@@ -35,12 +34,6 @@ int main(void)
   return 0;
 }
 
-int get_rand_int(void)
-{
-  Sleep(10);
-  srand(GetTickCount());
-  return rand() % 10;
-}
 
 void swap(int* pa, int* pb)
 {

@@ -8,14 +8,14 @@
 #define inve 4
 /* made by Prof. Lee
 */
-void func(void (*fp)(double a[3][3], double b[3][3]));
+void func(void (*fp)(double a[3][3], double b[3][3]));//함수 포인터를 매개변수로 갖는 함수 (3*3 행렬)
 void arr(double a[3][3]);			//행렬 출력
 void add(double a[3][3], double b[3][3]);	//덧셈
 void sub(double a[3][3], double b[3][3]);	//뺄셈
 void mul(double a[3][3], double b[3][3]);	//곱셈
 void transpose(double a[3][3]); // 전치행렬
 void inverse(double a[3][3]); // 역행렬
-void func1(void (*fd)(double c[2][2], double d[2][2]));
+void func1(void (*fd)(double c[2][2], double d[2][2]));// 함수 포인터를 매개변수로 갖는 함수(2*2행렬)
 void arr1(double c[2][2]);			//행렬 출력
 void add1(double c[2][2], double d[2][2]);	//덧셈
 void sub1(double c[2][2], double d[2][2]);	//뺄셈
@@ -25,7 +25,7 @@ void inverse1(double c[2][2]);//역행렬
 
 void main()
 {
-  int num;			//i,j는 for문 cho는 연산자 선택 yn은 행렬값 확인시 사용
+  int num;//2*2 또는 3*3행렬 번호 저장할 변수			
 
   printf("2*2행렬이면 1번, 3*3행렬이면 2번 : ");
   scanf("%d", &num);
@@ -37,11 +37,11 @@ void main()
 
 	switch (sel)
 	{
-	case sum:func1(add1); break;
-	case min:func1(sub1); break;
-	case muiti:func1(mul1); break;
-	case tra: func1(transpose1); break;
-	case inve:func1(inverse1); break;
+	case sum:func1(add1); break;//0이면 func1에 덧셈 기능 추가
+	case min:func1(sub1); break;//1이면 func1에 뺄셈 기능 추가
+	case muiti:func1(mul1); break;//2이면 func1에 곱셈 기능 추가
+	case tra: func1(transpose1); break;//3이면 func1에 전치행렬 기능 추가
+	case inve:func1(inverse1); break;//4이면 func1에 역행렬 기능 추가
 	}
   }
   else if (num == 2)
@@ -52,11 +52,11 @@ void main()
 
 	switch (sel)
 	{
-	case sum:func(add); break;
-	case min:func(sub); break;
-	case muiti:func(mul); break;
-	case tra: func(transpose); break;
-	case inve:func(inverse); break;
+	case sum:func(add); break;//0이면 func에 덧셈 기능 추가
+	case min:func(sub); break;//1이면 func에 뺄셈 기능 추가
+	case muiti:func(mul); break;//2이면 func에 곱셈 기능 추가
+	case tra: func(transpose); break;//3이면 func에 전치행렬 기능 추가
+	case inve:func(inverse); break;//4이면 func에 역행렬 기능 추가
 	}
   }
 
@@ -120,7 +120,7 @@ void func(void (*fp)(double a[3][3], double b[3][3]))
 	  break;
   }
 
-  fp(a, b);
+  fp(a, b);// 함수 포인터로 가리키는 함수를 호출
 }
 
 void arr(double a[3][3])
@@ -279,7 +279,7 @@ void func1(void (*fd)(double c[2][2], double d[2][2]))
 	  break;
   }
 
-  fd(c, d);
+  fd(c, d); //함수 포인터로 가리키는 함수를 호출
 }
 
 void arr1(double c[2][2])

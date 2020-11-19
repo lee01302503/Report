@@ -20,7 +20,7 @@ int main(void)
 
   printf("pa size : %d\n", sizeof(ary));
   printf("pb size : %d\n", sizeof(int)*pa[3]);
-  printf("pc size : %d\n", sizeof(pc[5]));
+  printf("pc size : %d\n", sizeof(pa[4])+1);
 
   return 0;
 }
